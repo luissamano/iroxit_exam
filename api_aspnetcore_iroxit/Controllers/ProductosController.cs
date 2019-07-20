@@ -30,13 +30,13 @@ namespace api_aspnetcore_iroxit.Controllers
 
         // GET: api/Productos/5
         [HttpGet("{id}")]
-        public async Task<Productos> GetProductos(int id)
+        public async Task<ActionResult<Productos>> GetProductos(int id)
         {
             var productos = await _context.Productos.FindAsync(id);
 
             if (productos == null)
             {
-                return productos;
+                return NotFound();
             }
 
             return productos;
