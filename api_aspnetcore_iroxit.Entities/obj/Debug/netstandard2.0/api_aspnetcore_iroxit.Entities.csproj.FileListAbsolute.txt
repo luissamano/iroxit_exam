@@ -1,0 +1,12 @@
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.deps.json
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.pdb
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.AssemblyInfo.cs
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.pdb
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.csproj.CopyComplete
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.Entities\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.csprojAssemblyReference.cache

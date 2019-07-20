@@ -1,8 +1,12 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using api_aspnetcore_iroxit.DAL;
+using api_aspnetcore_iroxit.Entities;
 
 namespace api_aspnetcore_iroxit.Controllers
 {
@@ -10,11 +14,33 @@ namespace api_aspnetcore_iroxit.Controllers
     [ApiController]
     public class ProductosController : ControllerBase
     {
-        // GET api/values
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly IroxitContext _context;
+
+        public ProductosController(IroxitContext context)
         {
-            return new string[] { "Produtos 1", "Produtos 2" };
+            _context = context;
         }
+
+        // GET: api/Productos
+        [HttpGet]
+        public async Task<List<Productos>> GetProductos()
+        {
+            return await _context.Productos.ToListAsync();
+        }
+
+        // GET: api/Productos/5
+        [HttpGet("{id}")]
+        public async Task<Productos> GetProductos(int id)
+        {
+            var productos = await _context.Productos.FindAsync(id);
+
+            if (productos == null)
+            {
+                return productos;
+            }
+
+            return productos;
+        }
+
     }
 }

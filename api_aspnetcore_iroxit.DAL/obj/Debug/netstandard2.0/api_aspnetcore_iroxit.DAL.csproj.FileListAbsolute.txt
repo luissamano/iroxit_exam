@@ -1,0 +1,12 @@
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.deps.json
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.pdb
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.csproj.CoreCompileInputs.cache
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.AssemblyInfo.cs
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.pdb
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.csprojAssemblyReference.cache
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.dll
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\bin\Debug\netstandard2.0\api_aspnetcore_iroxit.Entities.pdb
+C:\Users\marti\source\repos\iroxit_exam\api_aspnetcore_iroxit.DAL\obj\Debug\netstandard2.0\api_aspnetcore_iroxit.DAL.csproj.CopyComplete
