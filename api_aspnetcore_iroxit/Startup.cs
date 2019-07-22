@@ -21,6 +21,10 @@ namespace api_aspnetcore_iroxit
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddDbContext<IroxitContext>();
+            services.AddCors(options => {
+                options.AddPolicy("Todos",
+                builder => builder.WithOrigins("*").WithHeaders("*").WithMethods("*"));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,6 +40,7 @@ namespace api_aspnetcore_iroxit
                 app.UseHsts();
             }
 
+            app.UseCors("Todos");
             app.UseHttpsRedirection();
             app.UseMvc();
         }

@@ -15,4 +15,12 @@ namespace api_aspnetcore_iroxit.Entities
         public decimal PrecioUnitario { get; set; }
         public int Existencias { get; set; }
     }
+
+
+    public class TopProductos
+    {
+        public int IDProductos { get; set; }
+        public string Titulo { get; set; }
+        public int CantidadVendida { get; set; }
+    }
 }

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using api_aspnetcore_iroxit.DAL;
 using api_aspnetcore_iroxit.Entities;
+using Newtonsoft.Json;
 
 namespace api_aspnetcore_iroxit.Controllers
 {
@@ -42,61 +43,27 @@ namespace api_aspnetcore_iroxit.Controllers
             return ventas;
         }
 
-        // PUT: api/Ventas/5
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutVentas(int id, Ventas ventas)
+        // GET: api/Ventas/Articulo
+        [HttpGet("Articulo")]
+        public async Task<List<VentasArticulo>> GetVentasArticulo()
         {
-            if (id != ventas.IDVentas)
+
+            using (var ctx = new IroxitContext())
             {
-                return BadRequest();
+                var query = from a in ctx.Ventas
+                            join b in ctx.Productos on a.IDProductos equals b.IDProductos
+                            select new VentasArticulo
+                            {
+                                Titulo = b.Titulo,
+                                CantidadVendida = a.CantidadVendida,
+                                Monto = (a.CantidadVendida * b.PrecioUnitario)
+                            };
+
+                return await query.ToListAsync();
             }
 
-            _context.Entry(ventas).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!VentasExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
-
-            return NoContent();
         }
 
-        // POST: api/Ventas
-        [HttpPost]
-        public async Task<ActionResult<Ventas>> PostVentas(Ventas ventas)
-        {
-            _context.Ventas.Add(ventas);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetVentas", new { id = ventas.IDVentas }, ventas);
-        }
-
-        // DELETE: api/Ventas/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<Ventas>> DeleteVentas(int id)
-        {
-            var ventas = await _context.Ventas.FindAsync(id);
-            if (ventas == null)
-            {
-                return NotFound();
-            }
-
-            _context.Ventas.Remove(ventas);
-            await _context.SaveChangesAsync();
-
-            return ventas;
-        }
 
         private bool VentasExists(int id)
         {

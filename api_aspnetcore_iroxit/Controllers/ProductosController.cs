@@ -42,5 +42,23 @@ namespace api_aspnetcore_iroxit.Controllers
             return productos;
         }
 
+        [HttpGet("top")]
+        public async Task<List<TopProductos>> GetProductosMasVendidos()
+        {
+            var query = from A in _context.Productos
+                        join B in _context.Ventas
+                        on A.IDProductos equals B.IDProductos
+                        where B.CantidadVendida > 100
+                        orderby B.CantidadVendida descending
+                        select new TopProductos
+                        {
+                            IDProductos = A.IDProductos,
+                            Titulo = A.Titulo,
+                            CantidadVendida = B.CantidadVendida
+                        };
+
+            return await query.ToListAsync();
+        }
+
     }
 }

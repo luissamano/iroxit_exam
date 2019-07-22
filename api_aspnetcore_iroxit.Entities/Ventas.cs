@@ -16,4 +16,12 @@ namespace api_aspnetcore_iroxit.Entities
         [DatabaseGenerated(DatabaseGeneratedOption.Computed)]
         public DateTime Fecha { get; set; }     
     }
+
+
+    public class VentasArticulo
+    {
+        public string Titulo { get; set; }
+        public int CantidadVendida { get; set; }
+        public decimal Monto { get; set; }
+    }
 }
