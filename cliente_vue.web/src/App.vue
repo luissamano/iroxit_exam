@@ -41,7 +41,7 @@
                 <v-list-tile-title>Ventas</v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile :to="{ name: '' }">
+            <v-list-tile :to="{ name: 'ventas' }">
               <v-list-tile-action>
                 <v-icon>attach_money</v-icon>
               </v-list-tile-action>
@@ -51,7 +51,7 @@
                 </v-list-tile-title>
               </v-list-tile-content>
             </v-list-tile>
-            <v-list-tile :to="{ name: '' }">
+            <v-list-tile :to="{ name: 'ventas_articulo' }">
               <v-list-tile-action>
                 <v-icon>local_offer</v-icon>
               </v-list-tile-action>

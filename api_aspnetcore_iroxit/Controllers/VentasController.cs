@@ -48,10 +48,8 @@ namespace api_aspnetcore_iroxit.Controllers
         public async Task<List<VentasArticulo>> GetVentasArticulo()
         {
 
-            using (var ctx = new IroxitContext())
-            {
-                var query = from a in ctx.Ventas
-                            join b in ctx.Productos on a.IDProductos equals b.IDProductos
+                var query = from a in _context.Ventas
+                            join b in _con.Productos on a.IDProductos equals b.IDProductos
                             select new VentasArticulo
                             {
                                 Titulo = b.Titulo,
@@ -60,7 +58,6 @@ namespace api_aspnetcore_iroxit.Controllers
                             };
 
                 return await query.ToListAsync();
-            }
 
         }
 
