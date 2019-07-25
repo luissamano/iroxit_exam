@@ -47,9 +47,8 @@ namespace api_aspnetcore_iroxit.Controllers
         [HttpGet("Articulo")]
         public async Task<List<VentasArticulo>> GetVentasArticulo()
         {
-
                 var query = from a in _context.Ventas
-                            join b in _con.Productos on a.IDProductos equals b.IDProductos
+                            join b in _context.Productos on a.IDProductos equals b.IDProductos
                             select new VentasArticulo
                             {
                                 Titulo = b.Titulo,
@@ -58,7 +57,6 @@ namespace api_aspnetcore_iroxit.Controllers
                             };
 
                 return await query.ToListAsync();
-
         }
 
 

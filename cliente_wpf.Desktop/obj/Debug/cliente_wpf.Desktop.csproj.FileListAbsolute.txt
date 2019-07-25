@@ -21,3 +21,4 @@ C:\Users\marti\source\repos\iroxit_exam\cliente_wpf.Desktop\bin\Debug\MaterialDe
 C:\Users\marti\source\repos\iroxit_exam\cliente_wpf.Desktop\bin\Debug\MaterialDesignThemes.Wpf.xml
 C:\Users\marti\source\repos\iroxit_exam\cliente_wpf.Desktop\obj\Debug\cliente_wpf.Desktop_Content.g.cs
 C:\Users\marti\source\repos\iroxit_exam\cliente_wpf.Desktop\obj\Debug\cliente_wpf.Desktop.csproj.CopyComplete
+C:\Users\marti\source\repos\iroxit_exam\cliente_wpf.Desktop\obj\Debug\App.baml
