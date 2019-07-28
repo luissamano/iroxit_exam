@@ -5,7 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cliente_wpf.Desktop"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
-        mc:Ignorable="d" Height="450" Width="800" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="None">
+        mc:Ignorable="d" Height="550" Width="1000" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Window.CommandBindings>
+        <CommandBinding Command="Copy" Executed="OnCopy"></CommandBinding>
+    </Window.CommandBindings>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200" />
@@ -17,21 +20,54 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <Grid x:Name="GridToolbar" Grid.ColumnSpan="2" Background="Purple" MouseDown="GridToolbar_MouseDown">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
-                <Button x:Name="btn" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White"  >
-                    <materialDesign:PackIcon Kind="Bell" />
-                </Button>
-                <Button x:Name="Button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White"  >
-                    <materialDesign:PackIcon Kind="Account" />
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="15" />
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.Effect>
+                <DropShadowEffect BlurRadius="20" Color="#FFF91592" ShadowDepth="1" />
+            </Grid.Effect>
+
+            <StackPanel Grid.Row="1">
+                <Button Margin="10" Background="#FFF32194">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ViewDashboard"  />
+                        <TextBlock HorizontalAlignment="Center" Text="Dashboard" />
+                    </Grid>
                 </Button>
 
-                <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonFechar_Click" >
-                    <materialDesign:PackIcon Kind="Power" />
+                <Button Margin="10" Background="#FFF32194">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="ViewList" />
+                        <TextBlock HorizontalAlignment="Center" Text="Productos" />
+                    </Grid>
+                </Button>
+
+                <Button Margin="10" Background="#FFF32194">
+                    <Grid Width="150">
+                        <materialDesign:PackIcon Kind="AttachMoney" />
+                        <TextBlock HorizontalAlignment="Center" Text="Ventas" />
+                    </Grid>
                 </Button>
             </StackPanel>
             
         </Grid>
+
+        <Grid x:Name="GridToolbar" Grid.ColumnSpan="2" Background="#FF0476FF" MouseDown="GridToolbar_MouseDown">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" >
+                <Button x:Name="btn" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Background="#FFF32194"  >
+                    <materialDesign:PackIcon Kind="Bell" />
+                </Button>
+                <Button x:Name="Button" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Background="#FFF32194"  >
+                    <materialDesign:PackIcon Kind="Account" />
+                </Button>
+                <Button x:Name="ButtonFechar" Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}" BorderBrush="{x:Null}" Foreground="White" Click="ButtonFechar_Click" Background="#FFF32194" >
+                    <materialDesign:PackIcon Kind="Power" />
+                </Button>
+            </StackPanel>            
+        </Grid>
+
         
     </Grid>
 </Window>

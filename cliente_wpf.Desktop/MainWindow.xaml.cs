@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,5 +35,21 @@ namespace cliente_wpf.Desktop
         {
             DragMove();
         }
+
+        private void OnCopy(object sender, ExecutedRoutedEventArgs e)
+        {
+            if (e.Parameter is string stringValue)
+            {
+                try
+                {
+                    Clipboard.SetDataObject(stringValue);
+                }
+                catch (Exception ex)
+                {
+                    Trace.WriteLine(ex.ToString());
+                }
+            }
+        }
+
     }
 }
