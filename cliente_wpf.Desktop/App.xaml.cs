@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cliente_wpf.Desktop.Views;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,5 +14,6 @@ namespace cliente_wpf.Desktop
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

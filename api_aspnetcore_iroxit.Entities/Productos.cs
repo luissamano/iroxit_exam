@@ -23,4 +23,13 @@ namespace api_aspnetcore_iroxit.Entities
         public string Titulo { get; set; }
         public int CantidadVendida { get; set; }
     }
+
+    public class Products
+    {
+        public int idProductos { get; set; }
+        public string titulo { get; set; }
+        public string descripcion { get; set; }
+        public decimal precioUnitario { get; set; }
+        public int existencias { get; set; }
+    }
 }

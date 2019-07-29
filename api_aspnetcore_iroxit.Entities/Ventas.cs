@@ -24,4 +24,6 @@ namespace api_aspnetcore_iroxit.Entities
         public int CantidadVendida { get; set; }
         public decimal Monto { get; set; }
     }
+
+
 }
